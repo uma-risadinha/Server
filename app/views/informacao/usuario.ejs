@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title> Usuarios</title>
+</head>
+<style>
+ table#tabela1 tr td {
+ /* Toda a tabela com fundo creme */
+ background: #ffc;
+ }
+ table#tabela1 tr.cabeca td {
+ background: #eee;
+ /* Linhas com fundo cinza */
+ }
+</style>
+<body>
+ <table border="1px" cellpadding="5px" cellspacing="0" ID="tabela1">
+ <tr class="cabeca">
+ <td>Nome</td>
+ <td>E-Mail</td>
+ </tr>
+ <% console.log('QUANTIDADE DE REGISTROS' + usu.length); %>
+ <% for(var i = 0; i < usu.length; i++){ %>
+ <tr>
+ <td><%= usu[i].NOME_USUARIO %></td>
+ <td><%= usu[i].EMAIL_USUARIO %></td>
+ </tr>
+ <% } %>
+ </table>
+</body>
+</html> 
